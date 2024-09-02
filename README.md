@@ -1,8 +1,15 @@
-# React + Vite
+                                                                           Airbnb clone Front-end
+1.Packages i used in this front-end
+*AXios 
+*date-fns
+*react-route-dom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2.Style i used tailwind css
+* by using tailwind created a UI design with react libary
 
-Currently, two official plugins are available:
+3. Javascript is used for functinality
+   *  use the js make the project dynamic and useable feature 
+    
+  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+                                                                  
