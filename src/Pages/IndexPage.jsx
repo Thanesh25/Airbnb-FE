@@ -5,15 +5,22 @@ import { Link } from "react-router-dom";
 export default function IndexPages() {
   const [places,setPlaces] =useState([])
   useEffect(() => {
-    axios.get('/places').then(response => {
-     setPlaces(response.data);
-    })
+    const token = localStorage.getItem("token");
+    axios
+      .get("/places", {
+        headers: {
+          Authorization: `Bearer ${token}`, // Send the token in the Authorization header
+        }
+      })
+      .then((response) => {
+        setPlaces(response.data);
+      });
   },[]) 
   return (
     <div className=" mt-8 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       {places.length > 0 &&
         places.map((place) => (
-          <Link to={'/places/'+place._id}>
+          <Link to={'/place/'+place._id}>
             <div className="bg-gray-500 mb-2 rounded-2xl flex">
               {place.photos?.[0] && (
                 <img

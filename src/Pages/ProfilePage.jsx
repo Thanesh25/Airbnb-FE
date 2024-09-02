@@ -10,12 +10,29 @@ export default function ProfilePage() {
   const { ready, user, setUser } = useContext(UserContext);
   const [redirect, setRedirect] = useState(null);
 
-  async function logout() {
-    await axios.post("/logout");
-    setRedirect("/");
-    setUser(null);
-  }
+ 
+const logout = async () => {
+  const token = localStorage.getItem("token"); // Retrieve the token from local storage
 
+  if (token) {
+    try {
+      await axios.post( "/logout", {}, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      localStorage.removeItem("token"); // Remove the token from local storage
+      console.log("Logged out successfully");
+      setRedirect("/");
+      setUser(null);
+    } catch (error) {
+      console.error("Logout failed", error);
+    }
+  } else {
+    console.log("No token found");
+  }
+};
   //   if (!ready) {
   //   return <div>Loading...</div>
   // }
