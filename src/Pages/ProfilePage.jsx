@@ -16,12 +16,8 @@ const logout = async () => {
 
   if (token) {
     try {
-      await axios.post( "/logout", {}, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      await axios.post("/logout", {}, { headers: { Authorization: `Bearer ${token}`, }, });
+      
       localStorage.removeItem("token"); // Remove the token from local storage
       console.log("Logged out successfully");
       setRedirect("/");
