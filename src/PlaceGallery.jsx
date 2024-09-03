@@ -33,7 +33,10 @@ export default function PlaceGallery({ place }) {
           {place?.photos?.length > 0 &&
             place.photos.map((photo) => (
               <div>
-                <img src={"http://localhost:4000/Uploads/" + photo} alt="" />
+                <img
+                  src={"https://airbnb-be-ayxh.onrender.com/Uploads/" + photo}
+                  alt=""
+                />
               </div>
             ))}
         </div>
@@ -49,7 +52,10 @@ export default function PlaceGallery({ place }) {
                 <img
                   onClick={() => setShowAllPhotos(true)}
                   className="cursor-pointer aspect-square object-cover "
-                  src={"http://localhost:4000/Uploads/" + place.photos[0]}
+                  src={
+                    "https://airbnb-be-ayxh.onrender.com/Uploads/" +
+                    place.photos[0]
+                  }
                   alt=""
                 />
               </div>
@@ -60,7 +66,10 @@ export default function PlaceGallery({ place }) {
               <img
                 onClick={() => setShowAllPhotos(true)}
                 className="cursor-pointer aspect-square object-cover  "
-                src={"http://localhost:4000/Uploads/" + place.photos[1]}
+                src={
+                  "https://airbnb-be-ayxh.onrender.com/Uploads/" +
+                  place.photos[1]
+                }
                 alt=""
               />
             )}
@@ -69,7 +78,10 @@ export default function PlaceGallery({ place }) {
                 <img
                   onClick={() => setShowAllPhotos(true)}
                   className=" cursor-pointer aspect-square object-cover relative top-2"
-                  src={"http://localhost:4000/Uploads/" + place.photos[2]}
+                  src={
+                    "https://airbnb-be-ayxh.onrender.com/Uploads/" +
+                    place.photos[2]
+                  }
                   alt=""
                 />
               )}

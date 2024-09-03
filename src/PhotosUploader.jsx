@@ -59,11 +59,11 @@ export default function PhotosUploader({addedPhotos,onChange}) {
             <div className="h-32 flex relative" key={link}>
               <img
                 className="rounded-2xl w-full object-cover position-center"
-                src={"http://localhost:4000/Uploads/" + link}
+                src={"https://airbnb-be-ayxh.onrender.com/Uploads/" + link}
                 alt=""
               />
               <button
-                onClick={(ev) => removePhoto(ev,link)}
+                onClick={(ev) => removePhoto(ev, link)}
                 className=" cursor-pointer absolute bottom-1 right-1 text-white bg-black bg-opacity-50 rounded-2xl px-2 py-3"
               >
                 <svg
@@ -82,7 +82,7 @@ export default function PhotosUploader({addedPhotos,onChange}) {
                 </svg>
               </button>
               <button
-                onClick={(ev) => selectAsMainPhoto(ev,link)}
+                onClick={(ev) => selectAsMainPhoto(ev, link)}
                 className=" cursor-pointer absolute bottom-1 left-1 text-white bg-black bg-opacity-50 rounded-2xl px-2 py-3"
               >
                 {link === addedPhotos[0] && (
