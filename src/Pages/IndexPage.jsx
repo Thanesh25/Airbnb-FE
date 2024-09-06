@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { PacmanLoader } from "react-spinners"; // Import PacmanLoader
+import { ClipLoader } from "react-spinners"; // Import PacmanLoader
 
 export default function IndexPages() {
   const [places, setPlaces] = useState([]);
@@ -30,7 +30,7 @@ export default function IndexPages() {
     <div className="mt-8 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       {loader ? (
         <div className="loader-container flex justify-center items-center h-full w-full">
-          <PacmanLoader color={"#123abc"} loading={loader} size={50} />{" "}
+          <ClipLoader color={"#123abc"} loading={loader} size={50} />{" "}
           {/* Loader */}
         </div>
       ) : (
