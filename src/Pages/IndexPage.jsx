@@ -29,8 +29,12 @@ export default function IndexPages() {
   return (
     <div className="mt-8 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       {loader ? (
-        <div className="loader-container ">
-          <ClipLoader className="text-primary flex justify-center items-center" loading={loader} size={50} />{" "}
+        <div className="loader-container flex justify-center items-center">
+          <ClipLoader
+         
+            loading={loader}
+            size={50}
+          />{" "}
           {/* Loader */}
         </div>
       ) : (
