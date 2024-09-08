@@ -9,7 +9,7 @@ import PlaceImg from "../PlaceImg";
 
 export default function PlacesPage() {
   const [places, setPlaces] = useState('')
-  console.log(places);
+ 
   
   
   useEffect(() => {

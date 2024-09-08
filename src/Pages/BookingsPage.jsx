@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import BookingDates from "../BookingDates";
 export default function BookingsPage() {
   const [bookings, setBookings] = useState([]);
-  console.log(bookings);
-
+ 
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
