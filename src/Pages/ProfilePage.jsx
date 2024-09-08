@@ -29,9 +29,9 @@ const logout = async () => {
     console.log("No token found");
   }
 };
-  //   if (!ready) {
-  //   return <div>Loading...</div>
-  // }
+    if (!ready) {
+    return <div>Loading...</div>
+  }
 
   if (ready && !user && !redirect) {
     return <Navigate to={"/login"} />;
