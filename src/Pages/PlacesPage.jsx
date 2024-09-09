@@ -3,7 +3,7 @@ import AccountNav from "../AccountNav";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PlaceImg from "../PlaceImg";
-import { PacmanLoader } from "react-spinners"; // Import the loader
+import {  ClipLoader } from "react-spinners"; // Import the loader
 
 export default function PlacesPage() {
   const [places, setPlaces] = useState([]);
@@ -57,7 +57,7 @@ export default function PlacesPage() {
       {/* Loader Display */}
       {loader ? (
         <div className="flex justify-center items-center w-full h-full min-h-screen">
-          <PacmanLoader color={"#123abc"} loading={loader} size={50} />
+          <ClipLoader color={"black"} loading={loader} size={50} />
         </div>
       ) : (
         // Display the places when the loader is hidden
